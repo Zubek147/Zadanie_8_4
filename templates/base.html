@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}My first website{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="dane">
+    <h1 class="header">Witaj na mojej stronie</h1>
+    <img class="picture" src="https://scontent-waw1-1.xx.fbcdn.net/v/t39.30808-6/356112991_6269176169785303_2095501396189273800_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5614bc&_nc_ohc=j-FC5nuFOGYAX_9_naT&_nc_ht=scontent-waw1-1.xx&oh=00_AfDjFgU_npK-ZwWUSQEI1YpQikPcSrm2i06EZcEi4Jw0MA&oe=651702EC" alt="Me and my son" title="Family">
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

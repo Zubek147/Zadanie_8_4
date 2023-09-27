@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Kontakt{% endblock %}
+{% block content %}
+<h2 class="about">Kontakt</h2>
+
+{% if message_sent %}
+<p class = "success-message">Dziękujemy za przesłanie wiadomości</p>
+{% endif %}
+
+<ul class="points">
+    <li>Email: adam.grzymkowski@gmail.com</li>
+    <li>Telefon: 509252333</li>
+</ul>
+<form action="/mypage/contact" method="post">
+    <label class="message" for="message">Wiadomość:</label>
+    <textarea class="box" id="message" name="message" rows="4" cols="50"></textarea>
+    <input class="button" type="submit" value="Prześlij">
+</form>
+{% endblock %}
